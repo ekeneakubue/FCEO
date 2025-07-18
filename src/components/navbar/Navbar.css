@@ -1,0 +1,92 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(3, 158, 29);
+    padding: 1rem 4em;
+    color: white;    
+}
+.mylogo {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.logo{
+    width: 3rem;
+    height: 3rem;
+    
+}
+.logo img{
+    width: 100%;
+    border-radius: 30%;
+}
+.mylogo h2{
+    font-size: 25px;
+}
+
+
+.toggle-button {
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+    width: 60%;
+    font-size: 20px;    
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: white;
+}
+.navbar-links a:hover {
+    text-decoration: none;
+    color: rgb(6, 84, 24);
+}
+.portal-btn{
+    border: 1px solid;
+    padding: 0rem 1rem;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .navbar{
+        padding: 1em 0.1em;
+    }
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1rem 0rem;
+        text-align: center;
+        z-index: 1;
+        background-color: rgb(20, 20, 52);
+    }
+    .logo > h2{
+        font-size: 18px;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .toggle-button {
+        display: block;
+    }
+    .portal-btn{
+        width: 50%;
+        margin: 1rem auto;
+        padding: 0.5rem;
+        
+    }
+}
