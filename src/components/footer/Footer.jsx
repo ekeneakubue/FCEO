@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './footer.css';
+import style from './footer.module.css';
 
 export default function Footer() {
     const [isVisible, setIsVisible] = useState(false);
@@ -32,97 +32,88 @@ export default function Footer() {
     };
 
   return (
-    <div className='cokkk'>
-        <div className="footer">
-            <div className="container-fluid">
-                <div className="row text-light">
-                    <div className="col-md-3">
-                        <div className="f-col">
-                            <img src="./images/logo.PNG" alt="footer-logo" />
-                            <p>Subscribe to our Newsletter</p>
-                            <label for="exampleInputEmail1">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>     
-                            <div className='btn btn-outline-light'>Submit</div>
-
-                            <br /><br />
-                            <p className='text-light'>Stakeholders</p>
-                            <p><Link to='#' onClick={scrollToTop}>NUC</Link></p>
-                            <p><Link to='#' onClick={scrollToTop}>Ministry of Education</Link></p>
-                            <p><Link to='#' onClick={scrollToTop}>TETFund</Link></p>
-                        </div>
+    <div className={style.cokkk}>
+        <div className={style.footer_top}>          
+            <div>
+                <div className={style.f_col}>
+                    <div className={style.foot_img}>
+                      <img src="./images/logo.PNG" alt="footer-logo" />
                     </div>
-                    
-                    <div className="col-md-3">
-                        <div className="f-col">
-                            <p className='text-light'>General Information</p>
-                            <p><Link to='/about' onClick={scrollToTop}>About Us</Link></p>
-                            <p><Link to='#' onClick={scrollToTop}>International Collaboration</Link></p>
-                            <p><Link to='/contact' onClick={scrollToTop}>Contact Us</Link></p>
-                            <p><Link to='#' onClick={scrollToTop}>Scholarship</Link></p>
+                    <h3 className={style.foot_title}>Subscribe to our Newsletter</h3>
+                    <label for="exampleInputEmail1" className={style.foot_title}>Email</label>&nbsp;
+                    <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp"></input>     
+                    <div className={style.footer_btn}>Submit</div>
 
-                            
-                            <br /><br />
-                            <p className='text-light'>Careers</p>
-                            <p><Link to='#' onClick={scrollToTop}>Vacancies</Link></p>
-                            <p><Link to='#' onClick={scrollToTop}>Recuitments</Link></p>
-                            <p><Link to='#' onClick={scrollToTop}>Awards</Link></p>
-                            <p><Link to='#' onClick={scrollToTop}>Events</Link></p>                       
-                        </div>
-                    </div>
-
-                    <div className="col-md-3">
-                        <div className="f-col">
-                            <p className='text-light'>Students</p>
-                            <p><Link to='#' onClick={scrollToTop}>Course Information</Link></p>
-                            <p><Link to='#' onClick={scrollToTop}>Academic Calender</Link></p>
-                            <p><Link to='#' onClick={scrollToTop}>Technical Services</Link></p>                        
-                            <p><Link to='#' onClick={scrollToTop}>Portal</Link></p>
-                            
-                            <br /><br />
-                            <p className='text-light'>News</p>
-                            <p><Link to='#' onClick={scrollToTop}>Media Highlights</Link></p>
-                            <p><Link to='#' onClick={scrollToTop}>Stories</Link></p>
-                            <p><Link to='#' onClick={scrollToTop}>Institution Based Research</Link></p>
-                            <p><Link to='#' onClick={scrollToTop}>National Research Fund</Link></p>  
-                        </div>
-                    </div>
-
-                    <div className="col-md-3">
-                        <div className="f-col">
-                            <p className='text-light'>Contacts</p>
-                            <div className='foot-aside'>
-                                <i class="bi bi-geo-alt text-danger"></i>
-                                <p>OFEME-OHUHU, PMB 7324, umuahia north LGA, Abia state, Nigeria.</p>
-                            </div>
-                            <div className='foot-aside'>
-                                <i class="bi bi-telephone text-danger"></i>
-                                <p>0800000000</p>
-                            </div>
-                            <div className='foot-aside'>
-                                <i class="bi bi-envelope text-danger"></i>
-                                <p>info@fceofemeohuhu.edu.ng</p>    
-                            </div>
-
-                            <br /><br />
-                            <p className='text-light'>Alumni</p>
-                            <p><Link to='#' onClick={scrollToTop}>i-Transcript</Link></p>
-                            <p><Link to='#' onClick={scrollToTop}>Campus Life</Link></p>
-                            <p><Link to='#' onClick={scrollToTop}>Alumni Update</Link></p>
-                            <p><Link to='#' onClick={scrollToTop}>Health Services</Link></p>  
-                        </div>
-                    </div>
-                    {isVisible && (
-                        <div onClick={scrollToTop} className="scroll-to-top-btn">
-                            <i className="bi bi-arrow-up-circle-fill text-light"></i>
-                        </div>
-                    )}
-                    <hr/>
-                    <div className="col-md-12"><hr className='bg-secondary'/>
-                        <div className='copy'>Copyright 2025 &copy; Federal College of Education, Ofeme Ohuhu. All rights reserved. &nbsp;&nbsp;| &nbsp;&nbsp; Powered by <span><a href="https://expertmediasolution.com/" target='_blank'>Expert Media Solutions</a></span></div>
-                    </div>
+                    <br /><br />
+                    <h3 className={style.foot_title}>Stakeholders</h3>
+                    <p><Link to='#' onClick={scrollToTop}>NUC</Link></p>
+                    <p><Link to='#' onClick={scrollToTop}>Ministry of Education</Link></p>
+                    <p><Link to='#' onClick={scrollToTop}>TETFund</Link></p>
                 </div>
             </div>
-        </div>        
+            
+            <div>
+                <div className={style.f_col}>
+                    <h3 className={style.foot_title}>General Information</h3>
+                    <p><Link to='/about' onClick={scrollToTop}>About Us</Link></p>
+                    <p><Link to='#' onClick={scrollToTop}>International Collaboration</Link></p>
+                    <p><Link to='/contact' onClick={scrollToTop}>Contact Us</Link></p>
+                    <p><Link to='#' onClick={scrollToTop}>Scholarship</Link></p>
+
+                    
+                    <br /><br />
+                    <h3 className={style.foot_title}>Careers</h3>
+                    <p><Link to='#' onClick={scrollToTop}>Vacancies</Link></p>
+                    <p><Link to='#' onClick={scrollToTop}>Recuitments</Link></p>
+                    <p><Link to='#' onClick={scrollToTop}>Awards</Link></p>
+                    <p><Link to='#' onClick={scrollToTop}>Events</Link></p>                       
+                </div>
+            </div>
+
+            <div>
+                <div className={style.f_col}>
+                    <h3 className={style.foot_title}>Students</h3>
+                    <p><Link to='#' onClick={scrollToTop}>Course Information</Link></p>
+                    <p><Link to='#' onClick={scrollToTop}>Academic Calender</Link></p>
+                    <p><Link to='#' onClick={scrollToTop}>Technical Services</Link></p>                        
+                    <p><Link to='#' onClick={scrollToTop}>Portal</Link></p>
+                    
+                    <br /><br />
+                    <h3 className={style.foot_title}>News</h3>
+                    <p><Link to='#' onClick={scrollToTop}>Media Highlights</Link></p>
+                    <p><Link to='#' onClick={scrollToTop}>Stories</Link></p>
+                    <p><Link to='#' onClick={scrollToTop}>Institution Based Research</Link></p>
+                    <p><Link to='#' onClick={scrollToTop}>National Research Fund</Link></p>  
+                </div>
+            </div>
+
+            <div>
+              <div className={style.f_col}>
+                <h3 className={style.foot_title}>Contacts</h3>
+                <p>OFEME-OHUHU, PMB 7324, umuahia north LGA, Abia state, Nigeria.</p>
+                <p>0800000000</p>
+                <p>info@fceofemeohuhu.edu.ng</p>    
+
+                <br /><br />
+                <h3 className={style.foot_title}>Alumni</h3>
+                <p><Link to='#' onClick={scrollToTop}>i-Transcript</Link></p>
+                <p><Link to='#' onClick={scrollToTop}>Campus Life</Link></p>
+                <p><Link to='#' onClick={scrollToTop}>Alumni Update</Link></p>
+                <p><Link to='#' onClick={scrollToTop}>Health Services</Link></p>  
+              </div>
+            </div>
+
+            {/* {isVisible && (
+                <div onClick={scrollToTop} className={style.scroll_to_top_btn}>
+                    <h1>Up</h1>
+                </div>
+            )} */}
+                       
+        </div>
+        <hr/>
+        <div className={style.footer_down}><hr />
+            <div className={style.copy}>Copyright 2025 &copy; Federal College of Education, Ofeme Ohuhu. All rights reserved. &nbsp;&nbsp;| &nbsp;&nbsp; Powered by <span><a href="https://expertmediasolution.com/" target='_blank'>Expert Media Solutions</a></span></div>
+        </div>       
     </div>
   )
 }

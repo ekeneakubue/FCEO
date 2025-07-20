@@ -1,8 +1,10 @@
 import React, { useEffect }  from 'react'
-import './Home.css'
+import style from './Home.module.css'
 import Services from '../../components/services/Service'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Navbar from '../../components/navbar/Navbar';
+import Footer from '../../components/footer/Footer';
 
 export default function Home() {
   useEffect(() => {
@@ -13,11 +15,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div>      
-      <div className="hero-section">
-        <div className="hero-text">
+    <div> 
+      <Navbar/>     
+      <div className={style.hero_section}>
+        <div className={style.hero_text}>
           <h2 data-aos="fade-up" data-aos-duration="2000">Welcome to Federal College of Education, Ofeme Ohuhu</h2>
-          <p id="p-block"data-aos="fade-up" data-aos-duration="2000">
+          <p id={style.p_block} data-aos="fade-up" data-aos-duration="2000">
           <i class="bi bi-award-fill text-success"></i> To Educate to Liberate the Mind &nbsp;&nbsp;&nbsp;&nbsp;
           <i class="bi bi-award-fill text-success"></i> Committed to Excellence in Teacher Education
           </p>
@@ -27,11 +30,12 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="container">
-        <div className="home">          
+      <div className={style.container}>
+        <div className={style.home}>          
           <Services/>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

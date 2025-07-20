@@ -1,67 +1,69 @@
-.principal-officers{
+.principal_officers{
     width: 50%;
     margin: 2rem auto;
     text-align: center;
 }
-.principal-officers h1{
+.principal_officers h1{
     font-size: 30px;
     font-weight: 900;
     margin-bottom: 2rem;
 }
-.principal-officers hr{
+.principal_officers hr{
     height: 0.2rem;
     background-color: rgb(226, 230, 227);
     border: none;
 }
-.principal-officers img{
+.principal_officers img{
     width: 50%;
     height: 60vh;
     margin: 1rem 0rem;
     border-radius: 10px;
 }
-.principal-officers .position{
+.principal_officers .position{
     font-size: 20px;
     font-weight: 900;
 }
-.principal-officers .name{
+.principal_officers .name{
     font-size: 20px;
     font-weight: 600;
 }
 
 
-.support-units h1{
+.support_units h1{
     font-size: 30px;
     font-weight: 900;
     margin-bottom: 2rem;
     text-align: center;
 }
-.support-units .support{
+.support_units .support{
     display: grid;
     gap: 1rem;   
     width: 70%;
     margin: 2rem auto;
     grid-template-columns: repeat(3,1fr);
 }
-.support-card{
+.support_card{
     border: 1px solid rgb(192, 235, 192);
     text-align: center;
     padding: 2rem;
      border-radius: 10px;
 }
-
+.about{
+    background-color: green;
+}
 
 @media(max-width:667px){
-    .principal-officers{
+    .principal_officers{
         width: 100%;
         padding: 1rem;
     }
-    .principal-officers img{
+    .principal_officers img{
         width: 100%;       
     }
-    .support-units{
+    .support_units{
         padding: 1rem;
     }
-    .support-units .support{
+    .support_units .support{
     width: 100%;
     grid-template-columns: repeat(2,1fr);
 }

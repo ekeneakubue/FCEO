@@ -1,6 +1,7 @@
 .about {
     margin: 2rem 0rem;
     padding: 2em 0em;
+    background-color: red;
 }
 .about-us-mobile{
     display: none;

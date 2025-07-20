@@ -2,15 +2,41 @@
     margin: 2rem 0.5rem;
     box-sizing: border-box;
 }
-.service-title{
+.service_title{
     font-size: 30px;
     padding-bottom: 4rem;
     text-align: center;
 }
-.service-col-light{
+
+.our_services{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 2rem;
+}
+
+.card_plane{
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(218, 230, 218);
     background-color: rgb(221, 248, 222);
 }
-.service-bg-light{
+
+.card_light{
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(218, 230, 218);
+    background-color: white;
+}
+
+
+/* .service_light{
+    background-color: rgb(221, 248, 222);
+}
+.service_light{
     padding: 1.5rem 2rem;
     height: 10rem;
     color: rgb(4, 4, 52);    
@@ -52,4 +78,4 @@
         padding: 1%  1%;
         font-size: 14px;
     }
-}
+} */

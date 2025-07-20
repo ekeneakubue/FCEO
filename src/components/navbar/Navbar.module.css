@@ -1,3 +1,9 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -18,14 +24,14 @@
 }
 .logo img{
     width: 100%;
-    border-radius: 30%;
+    border-radius: 5px;
 }
 .mylogo h2{
     font-size: 25px;
 }
 
 
-.toggle-button {
+.toggle_button {
     font-size: 1.5em;
     background: none;
     border: none;
@@ -34,59 +40,60 @@
     display: none;
 }
 
-.navbar-links {
+.navbar_links {
     display: flex;
     justify-content: end;
+    align-items: center;
     gap: 2rem;
     width: 60%;
     font-size: 20px;    
 }
 
-.navbar-links a {
+.navbar_links a {
     text-decoration: none;
     color: white;
 }
-.navbar-links a:hover {
+.navbar_links a:hover {
     text-decoration: none;
     color: rgb(6, 84, 24);
 }
-.portal-btn{
+.portal_btn{
     border: 1px solid;
-    padding: 0rem 1rem;
-    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
 
 @media (max-width: 768px) {
     .navbar{
-        padding: 1em 0.1em;
+        padding: 1em 2em;
     }
-    .navbar-links {
+    .navbar_links {
         display: none;
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 60px;
+        top: 5rem;
         left: 0;
-        padding: 1rem 0rem;
+        padding: 2rem 0rem;
         text-align: center;
         z-index: 1;
         background-color: rgb(20, 20, 52);
     }
-    .logo > h2{
+    .mylogo > h2{
         font-size: 18px;
     }
 
-    .navbar-links.active {
+    .navbar_links.active {
         display: flex;
     }
 
-    .toggle-button {
+    .toggle_button {
         display: block;
+        font-size: 30px;
     }
-    .portal-btn{
+    .portal_btn{
         width: 50%;
         margin: 1rem auto;
-        padding: 0.5rem;
-        
+        padding: 0.5rem;        
     }
 }
