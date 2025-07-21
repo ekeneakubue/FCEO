@@ -1,0 +1,36 @@
+.academics_container{
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.academics_container a .card_light{
+    padding: 2rem;
+    background-color: #f0eeee;
+    height: 200px;
+    border: 1px solid #d2dad2;
+    text-align: center;
+}
+.academics_container a .card_white{
+    padding: 2rem;
+    background-color: #fff;
+    height: 200px;
+    border: 1px solid #d2dad2;
+    text-align: center;
+}
+.academics_container .icon{
+    font-size: 50px;
+    color: #22af45;
+    margin-bottom: 1rem;
+}
+.academics_container .title{
+    font-size: 25px;
+    color: #094418;
+}
+
+@media (max-width: 768px) {
+    
+    .academics_container{
+        padding: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
