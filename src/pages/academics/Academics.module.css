@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
 .academics_container a .card_light{
     padding: 2rem;
     background-color: #f0eeee;
@@ -27,10 +28,16 @@
     color: #094418;
 }
 
-@media (max-width: 768px) {
-    
+@media (max-width: 667px) {    
     .academics_container{
+        width: 100%;
         padding: 1rem;
         grid-template-columns: repeat(2, 1fr);
+    }
+    .academics_container a .card_light .title{
+        font-size: 18px;
+    }
+    .academics_container a .card_white .title{
+        font-size: 18px;
     }
 }
